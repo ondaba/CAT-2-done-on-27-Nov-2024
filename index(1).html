@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register Account</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Register Account</h1>
+    <form id="registerForm" novalidate>
+      <!-- Full Name -->
+      <div class="form-group">
+        <label for="fullName">Full Name:</label>
+        <input 
+          type="text" 
+          id="fullName" 
+          name="fullName" 
+          minlength="4" 
+          required 
+          placeholder="Enter your full name">
+        <span class="error">User name must be at least 4 characters</span>
+      </div>
+
+      <!-- Password -->
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input 
+          type="password" 
+          id="password" 
+          name="password" 
+          minlength="4" 
+          required 
+          placeholder="Enter your password">
+        <span class="error">Password must be at least 4 characters</span>
+      </div>
+
+      <!-- Confirm Password -->
+      <div class="form-group">
+        <label for="confirmPassword">Confirm Password:</label>
+        <input 
+          type="password" 
+          id="confirmPassword" 
+          name="confirmPassword" 
+          required 
+          placeholder="Re-enter your password">
+        <span class="error">Passwords do not match</span>
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input 
+          type="email" 
+          id="email" 
+          name="email" 
+          required 
+          placeholder="e.g., john@gmail.com">
+        <span class="error">Invalid email format</span>
+      </div>
+
+      <!-- Phone Number -->
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input 
+          type="tel" 
+          id="phone" 
+          name="phone" 
+          pattern="\d{4}-\d{3}-\d{3}" 
+          required 
+          placeholder="Format: 0XXX-XXX-XXX">
+        <span class="error">Invalid phone number</span>
+      </div>
+
+      <!-- Zip Code -->
+      <div class="form-group">
+        <label for="zipCode">Zip Code:</label>
+        <input 
+          type="text" 
+          id="zipCode" 
+          name="zipCode" 
+          pattern="\d{5}|\d{9}" 
+          required 
+          placeholder="5 or 9 digits">
+        <span class="error">Invalid Zip Code</span>
+      </div>
+
+      <!-- Card Type -->
+      <div class="form-group">
+        <label for="cardType">Card Type:</label>
+        <select id="cardType" name="cardType" required>
+          <option value="">Select a card type</option>
+          <option value="visa">Visa</option>
+          <option value="mastercard">MasterCard</option>
+          <option value="amex">American Express</option>
+        </select>
+      </div>
+
+      <!-- Card Number -->
+      <div class="form-group">
+        <label for="cardNumber">Card Number:</label>
+        <input 
+          type="text" 
+          id="cardNumber" 
+          name="cardNumber" 
+          pattern="\d{4}-\d{4}-\d{4}-\d{4}" 
+          required 
+          placeholder="1111-2222-3333-4444">
+        <span class="error">Invalid card number format</span>
+      </div>
+
+      <!-- Expiration Date -->
+      <div class="form-group">
+        <label for="expirationDate">Expiration Date:</label>
+        <input 
+          type="date" 
+          id="expirationDate" 
+          name="expirationDate" 
+          required>
+        <span class="error">Invalid date format</span>
+      </div>
+
+      <!-- Buttons -->
+      <div class="form-buttons">
+        <button type="submit">Register</button>
+        <button type="reset">Clear Form</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
